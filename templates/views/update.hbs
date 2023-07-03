@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+*{
+  margin: 0;
+  padding: 0;
+}
+.btn,.btn-2{
+  padding: 8px;
+  background-color:#ED4961 ;
+  color: black;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+.overlay{
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top:0%;
+  z-index: 1;
+  opacity: 1;
+  transition: 1s;
+}
+.updateForm{
+width:18.75rem;
+padding: 1.875rem 1.25rem;
+background-color: #ED4961;
+position: absolute;
+top:50%;
+left:50%;
+transform: translate(-50%,-49%);
+box-shadow: 0px 0px 10px 3px #ccc;
+transition: 2s;
+z-index: 9;
+
+}
+.updateForm input{
+  width: 100%;
+  margin-bottom: 10px;
+  height: 35px;
+}
+/* .showoverlay{
+opacity: 1;
+z-index: 1;
+}
+.showform{
+top:50%;
+z-index: 9;
+} */
+input[type="text"],input[type="number"]
+{
+  font-size:18px;
+}
+.updateForm span{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 30px;
+  height: 30px;
+   color: #ffffff;
+  background-color: #f47171;
+  font-size: 24px;
+ text-align: center;
+ cursor: pointer;
+}
+label{
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serifs;
+}
+
+.upt-btn{
+  padding: 6px;
+  text-align: center;
+  background-color: F5FCF9;
+  color: rgb(255, 249, 249);
+  border:none;
+  cursor: pointer;
+}
+.upt-btn:hover{
+background-color: #f47171;
+border-bottom: 1px solid black;
+
+}</style>
+<body>
+    <div class="overlay"></div>
+    <div class="updateForm">
+        <a href="/"> <span class="cross">&times;</span></a>
+        <form action="/update/{{number}}" method="post">
+        <div>
+            <label for="">Number:</label>
+            <input  value={{number}} type="number" name="number" id="" readonly>
+        </div>    
+        <div>
+            <label for="">Task:</label>
+            <input  type="text" name="name" id="">
+        </div>    
+        <button type="submit" class="btn-2">UpdateTask</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

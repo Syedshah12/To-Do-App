@@ -1,0 +1,13 @@
+#ED4961
+
+
+
+yellow:
+#EFCB73
+
+purple:
+#694F61
+
+
+text color:
+#F5FCF9
